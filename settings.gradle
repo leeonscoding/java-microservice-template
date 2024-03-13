@@ -1,0 +1,3 @@
+rootProject.name = 'transport-automation'
+
+include('customer-service', 'transport-service', 'trip-service')

@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: customer-service
+  liquibase:
+    enabled: false
+    change-log: classpath:/db/changelog/db.changelog-master.yaml
+  datasource:
+    url: jdbc:postgresql://localhost/customer
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true

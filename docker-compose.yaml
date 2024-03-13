@@ -1,0 +1,23 @@
+version: '2.1'
+services:
+  customer:
+    build: customer-service
+    mem_limit: 512m
+    environment:
+    - SPRING_PROFILES_ACTIVE=dev
+    ports:
+    - "8083:8080"
+  transport:
+    build: trasnport-service
+    mem_limit: 512m
+    environment:
+    - SPRING_PROFILES_ACTIVE=docker
+    ports:
+    - "8082:8080"
+  trip:
+    build: trip-service
+    mem_limit: 512m
+    environment:
+    - SPRING_PROFILES_ACTIVE=docker
+    ports:
+    - "8083:8080"
